@@ -1,0 +1,17 @@
+.btn {
+    display: inline-block;
+    padding: .85em 1.4em;
+    border: 1px solid transparent;
+    border-radius: $border-radius;
+    font-family: $font--roboto-slab;
+    background-color: $colour--blue;
+    color: $colour--grey;
+    transition: color $transition, background-color $transition;
+
+    &:hover,
+    &:focus {
+        outline: 0;
+        color: $colour--white;
+        background-color: darken($colour--blue, 2%);
+    }
+}

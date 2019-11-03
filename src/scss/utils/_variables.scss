@@ -1,0 +1,32 @@
+// Colours
+$colour--white: #fff;
+$colour--black: #4c4c4c;
+$colour--grey: #fbfbfb;
+$colour--grey2: #d2d2d2;
+$colour--grey3: #c5c5c5;
+$colour--green: #d7f6da;
+$colour--green2: #9ad6a7;
+$colour--blue: #7b80ff;
+$colour--pink: #ee8daa;
+
+// Social colours
+$colour--facebook: #3b5998;
+$colour--facebook-hover: lighten($colour--facebook, 5%);
+$colour--twitter: #1da1f2;
+$colour--twitter-hover: lighten($colour--twitter, 5%);
+$colour--linkedin: #0077b5;
+$colour--linkedin-hover: lighten($colour--linkedin, 5%);
+$colour--blogger: #fb8f3d;
+$colour--blogger-hover: lighten($colour--blogger, 5%);
+
+
+// Fonts
+$font--opensans: 'Open Sans', sans-serif;
+$font--roboto-slab: 'Roboto Slab', serif;
+
+// Custom MQ
+$mq--xxl: 1600px;
+
+// Other
+$transition: ease-in-out 200ms 50ms;
+$border-radius: 4px;

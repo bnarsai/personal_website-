@@ -1,0 +1,80 @@
+.feature {
+    padding: 8% 0;
+    background-color: $colour--grey;
+
+    @include media-breakpoint-up(sm) {
+        padding: 5% 0;
+    }
+
+    h2 {
+        margin-bottom: .6em;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 1em;
+        }
+    }
+
+    &__main {
+        margin-bottom: 5%;
+
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+
+    &__col {
+        background-color: $colour--white;
+
+        @include media-breakpoint-up(lg) {
+            flex-basis: percentage(1/3);
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+
+    &__block {
+        padding: 15px;
+        margin-bottom: 15px;
+
+        @include media-breakpoint-up(md) {
+            padding: 30px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+        }
+
+        h3 {
+            display: flex;
+            align-items: center;
+            min-height: 70px;
+            padding: 10px;
+            line-height: 1.3;
+            background-color: $colour--green;
+        }
+
+        > div {
+            border-bottom: 1px solid $colour--grey2;
+            padding-bottom: 15px;
+            margin: 15px 0;
+            line-height: 1.4;
+            font-size: 14px;
+            color: $colour--pink;
+
+            p {
+                margin-bottom: .1em;
+
+                &:last-child {
+                    margin: 0;
+                    color: $colour--grey3;
+                }
+            }
+        }
+    }
+
+    &__cta {
+        text-align: center;
+    }
+}
