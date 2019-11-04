@@ -9,6 +9,7 @@ const pxtorem = require('postcss-pxtorem');
 const autoprefixer = require('autoprefixer');
 const sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
+const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const sourcemaps = require('gulp-sourcemaps');
 const livereload = require('gulp-livereload');
@@ -18,7 +19,7 @@ const srcCss = './src/scss/**/*.scss';
 const destCss = './css';
 
 // JS
-const srcJs = './src/js/**/*.js';
+const srcJs = ['./src/js/jquery-3.4.1.js', './src/js/main.js'];
 const destJs = './js';
 
 // Images
@@ -54,6 +55,7 @@ gulp.task('sass', function () {
 gulp.task('js', function () {
 	gulp.src(srcJs)
 		.pipe(uglify())
+		.pipe(concat('main.js'))
 		.pipe(gulp.dest(destJs))
 		.pipe(livereload())
 	;

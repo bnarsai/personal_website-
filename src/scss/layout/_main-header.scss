@@ -10,7 +10,7 @@
         padding: 15px;
         background-color: $colour--white;
         background-color: rgba($colour--white, .9);
-        transition: top $transition;
+        transition: transform $transition;
 
         @include media-breakpoint-up(lg) {
             display: flex;
@@ -18,9 +18,14 @@
             justify-content: space-between;
             padding: 15px 25px;
         }
+
+        &.hidden {
+            transform: translateY(-100%);
+        }
     }
 
     &__logo {
+        display: block;
         width: 60px;
         height: 60px;
         margin: 0;
@@ -143,6 +148,23 @@
             font-family: $font--roboto-slab;
             font-size: 20px;
             color: $colour--black;
+            transition: color $transition;
+
+            &:after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 1px;
+                background-color: $colour--pink;
+                margin: 2px auto 0;
+                transition: width $transition;
+            }
+
+            &:hover {
+                &:after {
+                    width: 100%;
+                }
+            }
         }
     }
 
@@ -165,7 +187,7 @@
     }
 
     &__content {
-        padding: 10% 5%;
+        padding: 5%;
         text-align: center;
 
         h1 {
@@ -180,13 +202,21 @@
                 color: $colour--pink;
             }
         }
+
+        .btn {
+            margin-top: 30px;
+
+            @include media-breakpoint-up(md) {
+                margin-top: 60px;
+            }
+        }
     }
 
     &__avatar {
         position: relative;
         width: 70%;
         padding-bottom: 70%;
-        margin: 0 auto;
+        margin: 30px auto 0;
         border-radius: 50%;
         overflow: hidden;
 
